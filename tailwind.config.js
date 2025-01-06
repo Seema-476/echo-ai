@@ -42,7 +42,7 @@ module.exports = {
       boxShadow: {
       },
       backgroundImage: {
-        'hero-bg': "url('/public/assets/images/webp/hero-bg.webp')",
+        'hero-bg': "url('/public/assets/images/png/hero-bg.png')",
       },
       fontFamily: {
         'outfit': "'outfit', sans-serif",
