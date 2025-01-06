@@ -36,11 +36,13 @@ module.exports = {
       },
       colors: {
         'z-black': "#01000b",
+        'blue': "#3A3EF5",
+        'light-blue': "#32C8F1",
       },
       boxShadow: {
       },
       backgroundImage: {
-      
+        'hero-bg': "url('/public/assets/images/webp/hero-bg.webp')",
       },
       fontFamily: {
         'outfit': "'outfit', sans-serif",

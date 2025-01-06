@@ -9,7 +9,7 @@ const FrequentlyAskQuestions = () => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
   return (
-    <div className="bg-z-black pb-[178px] pt-[105px]">
+    <div className="bg-z-black pb-[178px] pt-[105px]" id='faq'>
       <div className="container">
         <Heading text="FAQs" />
         <div className="pt-[60px]">
@@ -26,8 +26,7 @@ const FrequentlyAskQuestions = () => {
                       src="/assets/images/svg/faq-arrow.svg"
                       alt={openAccordion === index ? "Collapse" : "Expand"}
                       className={`w-6 h-6 ml-3 size-5 transition-transform duration-500 transform ${openAccordion === index ? "rotate-180" : "rotate-0"
-                        }`}
-                    />
+                        }`}/>
                   </button>
                   <div
                     className={`transition-all duration-700 ease-in-out overflow-hidden ${openAccordion === index

@@ -1,14 +1,24 @@
 import './App.css';
+import BackToTop from './common/BackToTop';
+import PreLoader from './common/PreLoader';
+import BusinessResults from './components/BusinessResults';
 import Footer from './components/Footer';
 import FrequentlyAskQuestions from './components/FrequentlyAskQuestions';
-// import Header from './components/Header';
+import Hero from './components/Hero';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
     <>
-      {/* <Header/> */}
-      <FrequentlyAskQuestions />
-      <Footer/>
+      <>
+        <PreLoader/>
+        <Hero />
+        <BusinessResults />
+        <Testimonials />
+        <FrequentlyAskQuestions />
+        <Footer />
+      </>
+      <BackToTop/>
     </>
   );
 }

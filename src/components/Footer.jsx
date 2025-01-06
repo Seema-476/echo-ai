@@ -1,81 +1,67 @@
 import React from 'react'
-import { FOOTER_DATA } from '../utils/helper'
-import { socialLinks } from '../utils/helper'
+import { SOCIAL_LINKS,FOOTER_LIST } from '../utils/helper'
 
 const Footer = () => {
-    return (
-        <div className='bg-z-black'>
-            <div className='container'>
-                <div className='flex flex-row -mx-3 flex-wrap'>
-                    <div className='w-[33.33%] px-3'>
-                        <img src="/assets/images/png/footer-logo.png" alt="footer-logo" className='w-[150px] h-[190px]' />
-                    </div>
-                    {FOOTER_DATA.map((obj, index) => (
-                        <div
-                            key={index}
-                            className={`w-[33.33%] px-3 ${index === 3 ? '' : ''}`}>
-                            <ul>
-                                <li className="text-white">
-                                    {obj.title}
-                                </li>
-                                {obj.links.map((link, linkIndex) => (
-                                    <li key={linkIndex} className="text-white">
-                                        <a
-                                            className=""
-                                            href={link.href}
-                                        >
-                                            {link.text}
-                                        </a>
-                                        {socialLinks.map((link, index) => (
-                                            <a
-                                                key={index}
-                                                href={link.url}
-                                                className="transition duration-700 hover:scale-125"
-                                                target="_blank"
-                                                rel="noopener noreferrer">
-                                                {/* <Icon iconName={link.name} /> */}
-                                            </a>
-                                        ))}
-                                    </li>
-                                ))}
-                            </ul>
-                     
-                        </div>
-                    ))}
-                    {/* <ul>
-                          <li className='font-normal text-base leading-custom-xl text-white pb-[14px]'>Quick Links</li>
-                          <li className='pb-[14px]'><a href="" className='font-normal text-base leading-custom-xl text-white opacity-70'>About us</a></li>
-                          <li className='pb-[14px]'><a href="" className='font-normal text-base leading-custom-xl text-white opacity-70'>About us</a></li>
-                          <li className='pb-[14px]'><a href="" className='font-normal text-base leading-custom-xl text-white opacity-70'>About us</a></li>
-                          <li className='pb-[14px]'><a href="" className='font-normal text-base leading-custom-xl text-white opacity-70'>About us</a></li>
-                          <li className='pb-[14px]'><a href="" className='font-normal text-base leading-custom-xl text-white opacity-70'>About us</a></li>
-                      </ul> */}
-                </div>
-                {/* <div className='w-[33.33%] px-3 flex flex-col items-end'>
-                      <div>
-                          <ul>
-                              <li className='font-normal text-base leading-custom-xl text-white pb-3'>Send Us An E-mail</li>
-                              <li className='pb-6'><a href="" className='font-normal text-base text-white opacity-70'>info@echoai.ai</a></li>
-                          </ul>
+    const currentYear = new Date().getFullYear()
 
-                          <p className='font-normal text-base leading-custom-xl text-white pb-[14px]'>Follow Us On</p>
-                          <div className='flex gap-3'>
-                              <a href="" className='w-10 h-10 flex items-center justify-center bg-blue-400 rounded-[100px]'><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.39046 4.1675C6.39024 4.60953 6.21443 5.03336 5.90172 5.34577C5.589 5.65817 5.16499 5.83355 4.72296 5.83333C4.28094 5.83311 3.8571 5.65731 3.5447 5.34459C3.23229 5.03187 3.05691 4.60786 3.05713 4.16583C3.05735 3.72381 3.23316 3.29997 3.54587 2.98757C3.85859 2.67516 4.2826 2.49978 4.72463 2.5C5.16666 2.50022 5.59049 2.67603 5.9029 2.98874C6.2153 3.30146 6.39068 3.72547 6.39046 4.1675ZM6.44046 7.0675H3.10713V17.5008H6.44046V7.0675ZM11.7071 7.0675H8.39046V17.5008H11.6738V12.0258C11.6738 8.97583 15.6488 8.6925 15.6488 12.0258V17.5008H18.9405V10.8925C18.9405 5.75083 13.0571 5.9425 11.6738 8.4675L11.7071 7.0675Z" fill="white" />
-                              </svg></a>
-                              <a href="" className='w-10 h-10 flex items-center justify-center bg-blue-400 rounded-[100px]'><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.39046 4.1675C6.39024 4.60953 6.21443 5.03336 5.90172 5.34577C5.589 5.65817 5.16499 5.83355 4.72296 5.83333C4.28094 5.83311 3.8571 5.65731 3.5447 5.34459C3.23229 5.03187 3.05691 4.60786 3.05713 4.16583C3.05735 3.72381 3.23316 3.29997 3.54587 2.98757C3.85859 2.67516 4.2826 2.49978 4.72463 2.5C5.16666 2.50022 5.59049 2.67603 5.9029 2.98874C6.2153 3.30146 6.39068 3.72547 6.39046 4.1675ZM6.44046 7.0675H3.10713V17.5008H6.44046V7.0675ZM11.7071 7.0675H8.39046V17.5008H11.6738V12.0258C11.6738 8.97583 15.6488 8.6925 15.6488 12.0258V17.5008H18.9405V10.8925C18.9405 5.75083 13.0571 5.9425 11.6738 8.4675L11.7071 7.0675Z" fill="white" />
-                              </svg></a>
-                              <a href="" className='w-10 h-10 flex items-center justify-center bg-blue-400 rounded-[100px]'><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.39046 4.1675C6.39024 4.60953 6.21443 5.03336 5.90172 5.34577C5.589 5.65817 5.16499 5.83355 4.72296 5.83333C4.28094 5.83311 3.8571 5.65731 3.5447 5.34459C3.23229 5.03187 3.05691 4.60786 3.05713 4.16583C3.05735 3.72381 3.23316 3.29997 3.54587 2.98757C3.85859 2.67516 4.2826 2.49978 4.72463 2.5C5.16666 2.50022 5.59049 2.67603 5.9029 2.98874C6.2153 3.30146 6.39068 3.72547 6.39046 4.1675ZM6.44046 7.0675H3.10713V17.5008H6.44046V7.0675ZM11.7071 7.0675H8.39046V17.5008H11.6738V12.0258C11.6738 8.97583 15.6488 8.6925 15.6488 12.0258V17.5008H18.9405V10.8925C18.9405 5.75083 13.0571 5.9425 11.6738 8.4675L11.7071 7.0675Z" fill="white" />
-                              </svg></a>
+    return (
+        <div className='bg-z-black pt-[356px] max-xl:pt-[300px] max-lg:pt-[60px]' id='benefits'>
+            <div className='max-w-[1172px] px-4 mx-auto'>
+                <div className='flex justify-between max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-10'>
+                    <a href='#footerlogo'>
+                        <img
+                            src="/assets/images/webp/footer-logo.webp"
+                            alt='footer-Logo'
+                            className='max-w-[150px] pointer-events-none'
+                        />
+                    </a>
+                    <div className='flex flex-col gap-[14px]'>
+                        <p className='leading-5 max-sm:leading-4 text-white'>Quick Links</p>
+                        {FOOTER_LIST.map((obj, i) => (
+                            <a
+                                key={i}
+                                className='max-sm:text-sm max-sm:leading-4 text-white hover:text-dark-blue transition-all duration-300 opacity-70 cursor-pointer max-sm:text-center'
+                                href={obj.link}
+                            >
+                                {obj.title}
+                            </a>
+                        ))}
                     </div>
-                          </div>
-                      
-                  </div> */}
+                    <div className='flex flex-col'>
+                        <p className='text-white leading-5 max-sm:leading-4 pb-3 text-whit max-sm:text-sm max-sm:text-center'>
+                            Send Us An E-mail
+                        </p>
+                        <a
+                            className='text-white leading-6 max-sm:leading-4 opacity-70 cursor-pointer hover:text-dark-blue transition-all duration-300 max-sm:text-center'
+                            href='mailto:info@echoai.ai'
+                        >
+                            info@echoai.ai
+                        </a>
+                        <p className='text-white leading-5 max-sm:leading-4 max-sm:text-sm pt-8 max-sm:text-center'>
+                            Send Us An E-mail
+                        </p>
+                        <div className='flex items-center gap-3 pt-[18px]'>
+                            {SOCIAL_LINKS.map((obj, index) => (
+                                <a
+                                    key={index}
+                                    href={obj.href}
+                                    target='_blank'
+                                    className='hover:scale-110 transition-all duration-300 size-10 rounded-full bg-circle-gradient flex justify-center items-center'
+                                >
+                                    {obj.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className='pb-[30px] pt-[60px] max-sm:pt-10'>
+                    <div className='h-0.5 bottom-line w-full'></div>
+                    <p className='text-white opacity-80 text-center max-sm:text-sm pt-5'>
+                        Copyright ECHO AI Â© {currentYear} | All Rights Reserved
+                    </p>
+                </div>
             </div>
         </div>
-        // </div>
     )
 }
 

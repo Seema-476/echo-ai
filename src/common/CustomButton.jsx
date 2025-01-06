@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const CustomButton = () => {
+const CustomButton = ({ text, classStyle }) => {
   return (
-    <div>CustomButton</div>
-  )
-}
+    <button
+      className={`shadow-inner shadow-light-purple bg-gradient-to-r from-blue to-light-blue text-white font-semibold rounded-[57px] transition-transform hover:scale-105 text-base sm:text-xl sm:leading-custom-2xl ${classStyle}`}>
+      {text}</button>
+  );
+};
 
-export default CustomButton
+export default CustomButton;
