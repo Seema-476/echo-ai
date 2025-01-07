@@ -23,7 +23,6 @@ const BusinessResults = () => {
 
     return <span>{value}</span>;
   };
-
   return (
     <div className="text-white lg:pt-14 md:pt-12 py-6 bg-z-black lg:pb-[88px] sm:pb-12 relative -mt-[2px]" id="about">
       <div className="container mx-auto px-4 relative z-10">
