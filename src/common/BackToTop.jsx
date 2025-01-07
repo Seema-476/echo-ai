@@ -18,7 +18,7 @@ const BackToTop = () => {
     return (
         <div>
             {scrollTopVisible && (
-                <img onClick={scrollHandler} src="../assets/images/svg/double-arrow.svg" alt="svg" className='fixed right-3 bottom-3 cursor-pointer bg-blue p-2 rounded border-white border' />
+                <img onClick={scrollHandler} src="../assets/images/svg/double-arrow.svg" alt="svg" className='fixed right-3 bottom-3 cursor-pointer bg-gradient-to-tr from-blue to-light-blue p-2 rounded border-white border' />
             )}
         </div>
     );

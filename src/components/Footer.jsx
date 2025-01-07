@@ -12,7 +12,7 @@ const Footer = () => {
                         <img
                             src="/assets/images/webp/footer-logo.webp"
                             alt='footer-Logo'
-                            className='max-w-[150px] pointer-events-none'
+                            className='sm:max-w-[150px] max-w-24 sm:min-h-[190px] pointer-events-none'
                         />
                     </a>
                     <div className='max-sm:flex flex justify-between sm:w-[55%]'>

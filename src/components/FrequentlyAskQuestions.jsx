@@ -22,22 +22,22 @@ const FrequentlyAskQuestions = () => {
                   }`}>
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className={`font-medium text-xl leading-7 text-white flex justify-between items-center text-start p-4 sm:px-6 py-6  m ax-w-[974px] w-full ${openAccordion === index ? "pb-4" : "pb-6"}`}
+                    className={`font-medium sm:text-xl text-base sm:leading-7 text-white flex justify-between items-center text-start max-sm:!p-4 sm:px-6 pt-6 w-full ${openAccordion === index ? "pb-4" : "pb-6"}`}
                   >
                     {item.question}
                     <img
                       src="/assets/images/svg/faq-arrow.svg"
                       alt={openAccordion === index ? "Collapse" : "Expand"}
-                      className={`w-6 h-6 ml-3 size-5 transition-transform duration-500 transform ${openAccordion === index ? "rotate-180" : "rotate-0"
+                      className={`sm:w-6 w-4 h-4 sm:h-6 ml-3 size-5 transition-transform duration-500 transform ${openAccordion === index ? "rotate-180" : "rotate-0"
                         }`}/>
                   </button>
                   <div
-                    className={`transition-all duration-700 ease-in-out overflow-hidden ${openAccordion === index
-                      ? "opacity-100"
+                    className={`transition-all duration-700 ease-in-out overflow-auto ${openAccordion === index
+                      ? "max-sm:h-[150px] opacity-100"
                       : "max-h-0 opacity-0"
                       }`}>
                     <div className="transition-all duration-700 ease-in-out">
-                      {item.answer && <p className="text-white font-normal text-base leading-7 pl-6 pb-6 max-lg:!pr-6 lg:max-w-[950px]">{item.answer}</p>}
+                      {item.answer && <p className="text-white font-normal sm:text-base text-sm sm:leading-7 sm:pl-6 pl-4 pb-6 max-sm:!pr-4 max-lg:!pr-6 lg:max-w-[950px]">{item.answer}</p>}
                     </div>
                   </div>
                 </div>
