@@ -9,10 +9,10 @@ const FrequentlyAskQuestions = () => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
   return (
-    <div className="bg-z-black pb-[178px] pt-[105px] -mt-[2px]" id='faq'>
+    <div className="bg-z-black xl:pb-[178px] lg:pb-32 py-6 xl:pt-[105px] lg:pt-16 sm:py-16 -mt-[2px]" id='faq'>
       <div className="container">
         <Heading text="FAQs" />
-        <div className="pt-[60px]">
+        <div className="xl:pt-[60px] pt-10">
           {
             FREQUENTLY_ASK_QUESTIONS_LIST.map((item, index) => (
               <div key={index} className="max-w-[1022px] mx-auto">
@@ -22,7 +22,7 @@ const FrequentlyAskQuestions = () => {
                   }`}>
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className={`font-medium text-xl leading-7 text-white flex justify-between items-center text-start pl-6 py-6 max-w-[974px] w-full ${openAccordion === index ? "pb-4" : "pb-6"}`}
+                    className={`font-medium text-xl leading-7 text-white flex justify-between items-center text-start p-4 sm:px-6 py-6  m ax-w-[974px] w-full ${openAccordion === index ? "pb-4" : "pb-6"}`}
                   >
                     {item.question}
                     <img
@@ -37,7 +37,7 @@ const FrequentlyAskQuestions = () => {
                       : "max-h-0 opacity-0"
                       }`}>
                     <div className="transition-all duration-700 ease-in-out">
-                      {item.answer && <p className="text-white font-normal text-base leading-7 pl-6 pb-6 max-w-[950px]">{item.answer}</p>}
+                      {item.answer && <p className="text-white font-normal text-base leading-7 pl-6 pb-6 max-lg:!pr-6 lg:max-w-[950px]">{item.answer}</p>}
                     </div>
                   </div>
                 </div>

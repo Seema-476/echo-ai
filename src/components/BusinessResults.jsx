@@ -25,7 +25,7 @@ const BusinessResults = () => {
   };
 
   return (
-    <div className="text-white lg:pt-14 md:pt-12 pt-10 bg-z-black lg:pb-[88px] md:pb-12 pb-10 relative -mt-[2px]" id="about">
+    <div className="text-white lg:pt-14 md:pt-12 py-6 bg-z-black lg:pb-[88px] sm:pb-12 relative -mt-[2px]" id="about">
       <div className="container mx-auto px-4 relative z-10">
         <div className="gap-8 text-center flex max-md:flex-wrap items-center justify-center">
           {BUSINESS_DATA.map(({ id, number, prefix = "", unit = "", description }, index) => (

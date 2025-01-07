@@ -5,7 +5,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <div className='bg-z-black pt-[356px] max-xl:pt-[300px] max-lg:pt-[60px] -mt-[2px]' id='benefits'>
+        <div className='bg-z-black xl:pt-[178px] lg:pt-32 sm:pt-16 pt-6 -mt-[2px]' id='benefits'>
             <div className='max-w-[1172px] px-4 mx-auto'>
                 <div className='flex justify-between max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-10'>
                     <a href='#footerlogo'>
@@ -20,7 +20,7 @@ const Footer = () => {
                         {FOOTER_LIST.map((obj, i) => (
                             <a
                                 key={i}
-                                className='max-sm:text-sm max-sm:leading-4 text-white hover:text-dark-blue transition-all duration-300 opacity-70 cursor-pointer max-sm:text-center'
+                                className='max-sm:text-sm max-sm:leading-4 text-white hover:opacity-[1] transition-all duration-300 opacity-70 cursor-pointer max-sm:text-center'
                                 href={obj.link}
                             >
                                 {obj.title}
@@ -32,7 +32,7 @@ const Footer = () => {
                             Send Us An E-mail
                         </p>
                         <a
-                            className='text-white leading-6 max-sm:leading-4 opacity-70 cursor-pointer hover:text-dark-blue transition-all duration-300 max-sm:text-center'
+                            className='text-white leading-6 max-sm:leading-4 opacity-70 cursor-pointer hover:opacity-[1] transition-all duration-300 max-sm:text-center'
                             href='mailto:info@echoai.ai'
                         >
                             info@echoai.ai

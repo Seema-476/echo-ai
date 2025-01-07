@@ -8,17 +8,17 @@ import Heading from "../common/Heading";
 
 const Testimonials = () => {
   return (
-    <div className="bg-z-black pb-28 pt-[87px] -mt-[2px]" id="testimonials">
+    <div className="bg-z-black xl:pb-[105px] lg:pb-16 sm:py-16 py-6 lg:pt-[87px] -mt-[2px]" id="testimonials">
       <div className="container">
         <Heading classStyle="pb-10" text="Testimonials" />
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
           loop={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             640: {
               slidesPerView: 2,
