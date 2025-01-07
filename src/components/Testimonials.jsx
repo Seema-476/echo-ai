@@ -8,20 +8,20 @@ import Heading from "../common/Heading";
 
 const Testimonials = () => {
   return (
-    <div className="bg-z-black pb-28" id="testimonials">
+    <div className="bg-z-black pb-28 pt-[87px] -mt-[2px]" id="testimonials">
       <div className="container">
         <Heading classStyle="pb-10" text="Testimonials" />
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
           loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
           breakpoints={{
             640: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               pagination: {
                 clickable: true,
               },
@@ -46,11 +46,11 @@ const Testimonials = () => {
         >
           {TESTIMONIAL_SLIDER.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-custom-gradient p-6 pb-14 rounded-lg text-white shadow-lg">
-                <h3 className="text-2xl font-medium mb-4">
+              <div className="bg-custom-gradient xl:p-6 px-4 py-5 max-sm:pb-6 rounded-3xl text-white shadow-lg lg:max-w-[364px] xl:min-h-[289px] lg:min-h-[260px] w-full h-full">
+                <h3 className="text-2xl font-medium pb-4">
                   {testimonial.title}
                 </h3>
-                <p className="text-sm sm:text-base font-normal lg:mb-12 mb-6 opacity-80">{testimonial.description}</p>
+                <p className="text-sm xl:text-base font-normal lg:pb-12 pb-9 opacity-80">{testimonial.description}</p>
                 <div className="flex items-center gap-4">
                   <img
                     src={testimonial.image}

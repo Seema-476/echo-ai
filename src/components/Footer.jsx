@@ -5,7 +5,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <div className='bg-z-black pt-[356px] max-xl:pt-[300px] max-lg:pt-[60px]' id='benefits'>
+        <div className='bg-z-black pt-[356px] max-xl:pt-[300px] max-lg:pt-[60px] -mt-[2px]' id='benefits'>
             <div className='max-w-[1172px] px-4 mx-auto'>
                 <div className='flex justify-between max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-10'>
                     <a href='#footerlogo'>
